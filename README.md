@@ -1,2 +1,2 @@
-# Vanilla-vite-template
+Raccon Market project
 
