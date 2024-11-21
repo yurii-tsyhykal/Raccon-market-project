@@ -1,15 +1,36 @@
 @import './header.scss';
-@import './vite-promo.scss';
+@import './cover.scss';
+@import './advantages.scss';
+@import './benefits.scss';
+@import './reviews.scss';
+@import './about.scss';
+@import './gallery.scss';
+@import './footer.scss';
+@import './modal.scss';
+@import './privacy.scss';
+@import './terms.scss';
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: 'Comic Neue', sans-serif;
+  --second-family: 'Coiny', sans-serif;
+  --third-family: 'Jua', sans-serif;
+  --font3: 'Capriola', sans-serif;
+  --font4: 'Roboto', sans-serif;
+  font-family: var(--font-family);
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  --black: #101205;
+  --white: #fff;
+  --green: #76cd0b;
+  --yelow: #ffca33;
+  --orange: #f49f48;
+  --pink: #fd6e76;
+  --blue: #6de3fe;
 
+  background-color: var(--black);
+  color: var(--white);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
