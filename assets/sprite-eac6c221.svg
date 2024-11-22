@@ -9,5 +9,11 @@
 <symbol id="back-arrow" viewBox="0 0 32 32">
 <path  d="M20.943 5.724c0.521 0.521 0.521 1.365 0 1.886l-8.39 8.391 8.39 8.391c0.521 0.521 0.521 1.365 0 1.886s-1.365 0.521-1.886 0l-9.333-9.333c-0.521-0.521-0.521-1.365 0-1.886l9.333-9.333c0.521-0.521 1.365-0.521 1.886 0z"></path>
 </symbol>
+<symbol id="burger-icon" viewBox="0 0 48 32">
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M0 32v-5.333h48v5.333h-48zM0 18.667v-5.333h48v5.333h-48zM0 5.333v-5.333h48v5.333h-48z"></path>
+</symbol>
+<symbol id="icon-close" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M3.2 32l-3.2-3.2 12.8-12.8-12.8-12.8 3.2-3.2 12.8 12.8 12.8-12.8 3.2 3.2-12.8 12.8 12.8 12.8-3.2 3.2-12.8-12.8-12.8 12.8z"></path>
+</symbol>
 </defs>
 </svg>
