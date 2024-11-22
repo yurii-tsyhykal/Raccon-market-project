@@ -16,6 +16,8 @@ const reviewSwiper = new Swiper('.mySwiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  mousewheel: true,
-  keyboard: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
 });

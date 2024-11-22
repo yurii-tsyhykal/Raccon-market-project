@@ -12,7 +12,7 @@
   }
 
   .gallery-swiper {
-    .swiper-pagination {
+    .swiper-pagination.gallery {
       content: '';
       position: absolute;
       bottom: 8px;
@@ -20,22 +20,21 @@
       width: 100%;
       text-align: center;
       z-index: 10;
-    }
+      .swiper-pagination-bullet:not(:last-child) {
+        margin-right: 4px;
+      }
+      .swiper-pagination-bullet {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: var(--white);
+        border-radius: 100%;
+      }
 
-    .swiper-pagination-bullet:not(:last-child) {
-      margin-right: 4px;
-    }
-    .swiper-pagination-bullet {
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      background-color: var(--white);
-      border-radius: 100%;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: var(--green);
-      opacity: 1;
+      .swiper-pagination-bullet-active {
+        background-color: var(--green);
+        opacity: 1;
+      }
     }
   }
 }

@@ -1,16 +1,18 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
 
-const reviewSwiper = new Swiper('.gallery-swiper', {
+const gallerySwiper = new Swiper('.gallery-swiper', {
   direction: 'horizontal',
   loop: true,
   spaceBetween: 40,
   slidesPerView: 1,
   centeredSlides: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination.gallery',
     clickable: true,
   },
-  mousewheel: true,
-  keyboard: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
 });

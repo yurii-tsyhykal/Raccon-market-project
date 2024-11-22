@@ -1,0 +1,26 @@
+.footer-container {
+  padding-bottom: 24px;
+  .footer-nav {
+    margin-bottom: 16px;
+    .footer-list-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 0px 8px 0px 14px;
+      .footer-links-item {
+        .footer-links,
+        .footer-text {
+          font-weight: 700;
+          font-size: 14px;
+          text-align: center;
+          color: var(--white);
+        }
+      }
+    }
+  }
+  .footer-rights {
+    font-size: 14px;
+    text-align: center;
+  }
+}
