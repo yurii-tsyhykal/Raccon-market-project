@@ -1,0 +1,19 @@
+.terms-title {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+.terms-condition-box {
+  font-size: 14px;
+  .terms-list {
+    font-size: 14px;
+    padding-left: 20px;
+    list-style-type: disc;
+    list-style-position: outside;
+
+    .terms-link {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
