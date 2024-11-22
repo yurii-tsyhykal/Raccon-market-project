@@ -35,6 +35,7 @@
     }
     .swiper-button-prev,
     .swiper-button-next {
+      fill: var(--green);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

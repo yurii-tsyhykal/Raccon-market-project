@@ -1,19 +1,53 @@
-.terms-title {
-  font-weight: 700;
-  font-size: 20px;
-  text-align: center;
-}
-.terms-condition-box {
-  font-size: 14px;
-  .terms-list {
-    font-size: 14px;
-    padding-left: 20px;
-    list-style-type: disc;
-    list-style-position: outside;
+.terms-section {
+  .terms-title {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
 
-    .terms-link {
-      text-decoration: underline;
-      text-decoration-skip-ink: none;
+  .terms-text {
+    margin-bottom: 16px;
+  }
+  .terms-text-before-list {
+    margin-bottom: 8px;
+  }
+  .terms-condition-box {
+    font-size: 14px;
+    .terms-list {
+      font-size: 14px;
+      padding-left: 20px;
+      list-style-type: disc;
+      list-style-position: outside;
+      margin-bottom: 16px;
+
+      .terms-link {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+
+  .terms-changes {
+    font-size: 14px;
+    .terms-changes-title {
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .terms-changes-text {
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .terms-changes-date-text {
+      margin-bottom: 16px;
+    }
+  }
+  .terms-contact-us-box {
+    font-size: 14px;
+    .terms-contact-us-title {
+      font-weight: 700;
+      font-size: 14px;
     }
   }
 }

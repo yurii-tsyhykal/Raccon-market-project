@@ -31,33 +31,91 @@
     text-align: center;
     margin-bottom: 24px;
   }
-
+  .privacy-info-block {
+    font-size: 14px;
+    .privacy-info-text-before-list {
+      margin-bottom: 8px;
+    }
+    .privacy-info-text {
+      margin-bottom: 16px;
+    }
+    .privacy-info-list {
+      margin-bottom: 16px;
+    }
+  }
   .privacy-policy-text {
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   .privacy-policy-subtitle {
     font-weight: 700;
     font-size: 14px;
-  }
-  .privacy-info-text,
-  .privacy-tpa-text,
-  .privacy-oo-rights-text,
-  .privacy-policy-drp-subtitle,
-  .privacy-children-text,
-  .privacy-security-text,
-  .privacy-changes-text,
-  .privacy-contact-us-text {
-    font-size: 14px;
+    margin-bottom: 8px;
   }
 
+  .privacy-tpa-box {
+    font-size: 14px;
+    .privacy-tpa-text {
+      margin-bottom: 8px;
+    }
+    .privacy-tpa-list {
+      margin-bottom: 16px;
+    }
+  }
+
+  .privacy-oo-rights-box {
+    font-size: 14px;
+    .privacy-oo-rights-text {
+      margin-bottom: 8px;
+      &:nth-last-child(n) {
+        margin-bottom: 16px;
+      }
+    }
+    .privacy-policy-drp-subtitle {
+      margin-bottom: 8px;
+    }
+  }
+
+  .privacy-children-box {
+    font-size: 14px;
+    .privacy-children-text {
+      margin-bottom: 8px;
+      &:nth-last-child(n) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .privacy-security-box {
+    font-size: 14px;
+    .privacy-security-text {
+      margin-bottom: 16px;
+    }
+  }
+
+  .privacy-consent-box {
+    font-size: 14px;
+    .privacy-consent-text {
+      margin-bottom: 16px;
+    }
+  }
+
+  .privacy-changes-box {
+    font-size: 14px;
+    .privacy-changes-text {
+      margin-bottom: 16px;
+    }
+    .privacy-changes-date-text {
+      padding-right: 30px;
+      margin-bottom: 16px;
+    }
+  }
   .privacy-info-list,
   .privacy-tpa-list {
     font-size: 14px;
     padding-left: 20px;
     list-style-type: disc;
-    list-style-position: outside;
   }
   .privacy-tpa-link {
     text-decoration: underline;
