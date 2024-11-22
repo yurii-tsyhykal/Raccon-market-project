@@ -6,5 +6,11 @@
 <symbol id="right-arrow" viewBox="0 0 32 32">
 <path fill="#76cd0b" style="fill: var(--color1, #76cd0b)" d="M10.667 25.333v-18.667l14.667 9.333-14.667 9.333zM13.334 20.467l7-4.467-7-4.467v8.933z"></path>
 </symbol>
+<symbol id="burger-icon" viewBox="0 0 48 32">
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M0 32v-5.333h48v5.333h-48zM0 18.667v-5.333h48v5.333h-48zM0 5.333v-5.333h48v5.333h-48z"></path>
+</symbol>
+<symbol id="icon-close" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M3.2 32l-3.2-3.2 12.8-12.8-12.8-12.8 3.2-3.2 12.8 12.8 12.8-12.8 3.2 3.2-12.8 12.8 12.8 12.8-3.2 3.2-12.8-12.8-12.8 12.8z"></path>
+</symbol>
 </defs>
 </svg>
