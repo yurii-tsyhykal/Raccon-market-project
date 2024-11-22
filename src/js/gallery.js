@@ -4,8 +4,9 @@ import 'swiper/css';
 const reviewSwiper = new Swiper('.gallery-swiper', {
   direction: 'horizontal',
   loop: true,
-  spaceBetween: 25,
+  spaceBetween: 40,
   slidesPerView: 1,
+  centeredSlides: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
