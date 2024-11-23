@@ -1,79 +1,125 @@
-.container.review {
+.container.review-container {
   letter-spacing: 0;
-  padding: 0px;
-  position: relative;
-
+  padding: 0px 0px;
+  @include media(desktop) {
+    padding: 0px 142px;
+  }
   .review-title {
     font-weight: 700;
     font-size: 20px;
     text-align: center;
     color: var(--green);
-    margin-bottom: 16px;
+    @include media(desktop) {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
   }
-  .swiper {
-    padding: 10px 25px;
-    .review-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
-      margin-bottom: 10px;
-      img {
-        max-height: 80px;
+  .review-swiper {
+    margin: 0 auto;
+    padding: 0px 24px 18px 24px;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    @include media(desktop) {
+      padding: 0px;
+      max-width: 100%;
+      max-height: none;
+      overflow: visible;
+    }
+    .swiper-wrapper.review-wrapper {
+      transition: transform 300ms ease-out;
+      @include media(desktop) {
+        display: flex;
+        width: 100%;
+        gap: 100px 71px;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        transition: none;
       }
-      .review-text-box {
+      .swiper-slide {
+        color: var(--green);
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media(desktop) {
+          padding: 0px;
+        }
+
+        .review-img-box {
+          padding: 9px 0px;
+          margin-right: 8px;
+          // object-fit: cover;
+          img {
+            max-width: none;
+          }
+          @include media(desktop) {
+            margin-right: 24px;
+          }
+        }
         .review-username {
-          font-size: 16px;
           font-weight: 700;
-          color: var(--green);
-          margin-bottom: 5px;
+          font-size: 16px;
+          margin-bottom: 10px;
         }
         .review-text {
+          font-weight: 400;
+          font-size: 16px;
           color: var(--white);
+        }
+        @include media(desktop) {
+          max-width: 258px;
+          &.spec-slide {
+            transform: translateY(80px);
+          }
         }
       }
     }
-    .swiper-button-prev,
-    .swiper-button-next {
-      fill: var(--green);
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 5;
-
-      &.swiper-button-prev {
-        left: 4px;
-      }
-
-      &.swiper-button-next {
-        right: 4px;
-      }
-    }
-
     .swiper-pagination {
-      content: '';
+      transform: translateY(10px);
+      .swiper-pagination-bullet {
+        border-radius: 100%;
+        width: 5px;
+        height: 5px;
+        background-color: var(--white);
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: var(--green);
+        width: 5px;
+        height: 5px;
+      }
+      @include media(desktop) {
+        display: none;
+      }
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-prev:after {
+      content: none;
+    }
+    .review-custom-prev,
+    .review-custom-next {
       position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      z-index: 10;
+      fill: var(--green);
+      height: 16px;
+      width: 16px;
+      @include media(desktop) {
+        display: none;
+      }
     }
-
-    .swiper-pagination-bullet:not(:last-child) {
-      margin-right: 4px;
+    .review-custom-prev {
+      top: 50%;
+      left: 5px;
     }
-    .swiper-pagination-bullet {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      background-color: var(--white);
-      border-radius: 100%;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: var(--green);
-      opacity: 1;
+    .review-custom-next {
+      top: 50%;
+      right: 5px;
     }
   }
 }
