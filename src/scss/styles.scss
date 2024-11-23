@@ -47,14 +47,6 @@ section {
   padding: 0px 24px;
 }
 
-footer {
-  padding: 0px 24px;
-}
-
-header {
-  padding: 0px 24px;
-}
-
 @include media(desktop) {
   section {
     padding: 80px 0px;
@@ -62,13 +54,6 @@ header {
   .container {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 0px 48px;
-  }
-  footer {
-    padding: 0px 48px;
-  }
-
-  header {
     padding: 0px 48px;
   }
 }
