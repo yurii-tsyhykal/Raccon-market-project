@@ -1,5 +1,8 @@
-.footer-container {
-  padding-bottom: 24px;
+.container.footer {
+  padding: 24px;
+  @include media(desktop) {
+    padding: 48px;
+  }
   .footer-nav {
     margin-bottom: 16px;
     .footer-list-links {
@@ -9,12 +12,23 @@
       gap: 8px;
       padding: 0px 8px 0px 14px;
       .footer-links-item {
-        .footer-links,
-        .footer-text {
+        .footer-links {
           font-weight: 700;
           font-size: 14px;
           text-align: center;
           color: var(--white);
+          transition: color 250ms linear;
+          &:hover,
+          &:focus {
+            outline: transparent;
+            color: var(--yelow);
+          }
+          &:active {
+            color: var(--orange);
+          }
+          @include media(desktop) {
+            font-size: 14px;
+          }
         }
       }
     }

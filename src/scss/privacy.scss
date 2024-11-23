@@ -1,23 +1,29 @@
 .header-back {
-  padding-top: 25px;
-  .back-home-btn {
-    color: var(--green);
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-
-    .back-home-arrow {
-      .back-icon {
-        display: block;
-        fill: var(--green);
-      }
-    }
-    .back-home-btn-text {
-      display: block;
-
+  padding: 25px 0px 0px 0px;
+  .container {
+    .back-home-btn {
+      color: var(--green);
+      display: inline-flex;
+      align-items: center;
+      font-weight: 700;
+      transition: text-shadow 250ms linear;
       &:hover,
       &:focus {
+        outline: transparent;
+      }
+      &:hover .back-home-btn-text,
+      &:focus .back-home-btn-text {
+        text-shadow: 0 2px 2px rgba(255, 255, 255, 0.3);
+      }
+      &:active .back-home-btn-text {
         text-shadow: 0 4px 4px rgba(255, 255, 255, 0.25);
+      }
+
+      .back-home-arrow {
+        .back-icon {
+          display: block;
+          fill: var(--green);
+        }
       }
     }
   }
@@ -124,8 +130,4 @@
   .privacy-policy-drp-subtitle {
     font-weight: normal;
   }
-}
-
-.footer-container {
-  padding: 24px 0px;
 }
