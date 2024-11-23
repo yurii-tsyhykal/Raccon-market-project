@@ -15,11 +15,11 @@
     <script type="module" crossorigin src="/Raccoon-market-project/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/Raccoon-market-project/assets/vendor-dc05894a.js">
     <link rel="stylesheet" href="/Raccoon-market-project/assets/vendor-7c8ef494.css">
-    <link rel="stylesheet" href="/Raccoon-market-project/assets/styles-89a1760d.css">
+    <link rel="stylesheet" href="/Raccoon-market-project/assets/styles-bf25cc95.css">
   </head>
   <body>
     <header class="header">
-  <div class="header-navigation">
+  <nav class="header-navigation">
     <div class="header-menu">
       <ul class="header-list">
         <li class="header-list-item">
@@ -52,26 +52,80 @@
         </li>
       </ul>
     </div>
-    <button type="button" class="open-menu">
+    <button type="button" class="open-menu" aria-expanded="false">
       <svg class="burger">
         <use href="/Raccoon-market-project/assets/sprite-eac6c221.svg#burger-icon"></use>
       </svg>
     </button>
     <div class="header-logo">
       <a href="./index.html" class="header-logo" aria-label="Home Page">
-        <img
-          class="header-logo-img"
-          src="/Raccoon-market-project/assets/logo-header-227a64be.png"
-          alt="header-logo"
-        />
+        <picture class="header-logo-img">
+          <source
+            srcset="/Raccoon-market-project/assets/headerMob-89d27712.png 1x, /Raccoon-market-project/assets/headerMob2x-70e855a1.png 2x"
+            media="(min-width: 320px) and (max-width: 1200px)"
+            loading="lazy"
+          />
+          <img
+            src="/Raccoon-market-project/assets/header-227a64be.png"
+            srcset="/Raccoon-market-project/assets/header2x-6812a637.png 2x"
+            alt="header-logo"
+            loading="lazy"
+          />
+        </picture>
       </a>
     </div>
-  </div>
+  </nav>
   <div class="backdrop" id="backdrop"></div>
 </header>
 
     <main>
-      <p>cover section</p>
+      <section>
+  <div class="container">
+    <div class="cover-text-container">
+      <h1 class="cover-titel">
+        <span>Raccoon</span>
+        <span>Market: </span>
+        <span>Farm Fest</span>
+      </h1>
+      <p class="cover-subtitel">
+        Harvest, Trade, and Grow Your Farm with Raccoon Friends!
+      </p>
+    </div>
+    <div class="cover-img-conteiner">
+      <picture class="cover-img">
+        <source
+          srcset="/Raccoon-market-project/assets/coverMob-926ce88a.png 1x, /Raccoon-market-project/assets/coverMob2x-c717b270.png 2x"
+          media="(min-width: 320px) and (max-width: 1200px)"
+          loading="lazy"
+        />
+        <img
+          src="/Raccoon-market-project/assets/cover-479cc444.png"
+          srcset="/Raccoon-market-project/assets/cover2x-886d5545.png 2x"
+          alt="cover_img"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+    <div class="cover-google">
+      <a
+        href="https://play.google.com/store/apps/details?id=games.extras.racoonsmarket"
+        target="_blank"
+        class="google-link"
+      >
+        <!-- Фоновая часть кнопки -->
+        <div class="google-button">
+          <img
+            class="cover-google-icon"
+            src="../img/cover/google.svg"
+            alt="google"
+          />
+          <span class="cover-link">Google Play</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
       <p>advantages section</p>
 
       <p>benefits section</p>
