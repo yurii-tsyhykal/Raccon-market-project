@@ -1,1 +1,46 @@
-<p>cover section</p>
+<section>
+  <div class="container">
+    <div class="cover-text-container">
+      <h1 class="cover-titel">
+        <span>Raccoon</span>
+        <span>Market: </span>
+        <span>Farm Fest</span>
+      </h1>
+      <p class="cover-subtitel">
+        Harvest, Trade, and Grow Your Farm with Raccoon Friends!
+      </p>
+    </div>
+    <div class="cover-img-conteiner">
+      <picture class="cover-img">
+        <source
+          srcset="./img/cover/coverMob.png 1x, ./img/cover/coverMob2x.png 2x"
+          media="(min-width: 320px) and (max-width: 1200px)"
+          loading="lazy"
+        />
+        <img
+          src="./img/cover/cover.png"
+          srcset="./img/cover/cover2x.png 2x"
+          alt="cover_img"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+    <div class="cover-google">
+      <a
+        href="https://play.google.com/store/apps/details?id=games.extras.racoonsmarket"
+        target="_blank"
+        class="google-link"
+      >
+        <!-- Фоновая часть кнопки -->
+        <div class="google-button">
+          <img
+            class="cover-google-icon"
+            src="./img/cover/google.svg"
+            alt="google"
+          />
+          <span class="cover-link">Google Play</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
