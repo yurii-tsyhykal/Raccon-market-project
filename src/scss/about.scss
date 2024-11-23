@@ -1,22 +1,30 @@
-.about-title {
-  font-weight: 700;
-  font-size: 20px;
-  text-align: center;
-  color: var(--yelow);
-  margin-bottom: 16px;
+.container.about {
   @include media(desktop) {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 24px;
-    text-transform: uppercase;
-    margin-bottom: 48px;
+    padding: 0px 236px;
   }
-}
+  .about-title {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: var(--yelow);
+    margin-bottom: 16px;
+    @include media(desktop) {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+  }
 
-.about-text {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--white);
-  text-align: center;
+  .about-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    @include media(desktop) {
+      text-align: start;
+    }
+  }
 }
