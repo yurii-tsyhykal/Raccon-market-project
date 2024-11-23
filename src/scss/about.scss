@@ -4,8 +4,19 @@
   text-align: center;
   color: var(--yelow);
   margin-bottom: 16px;
+  @include media(desktop) {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
 }
 
 .about-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--white);
   text-align: center;
 }
