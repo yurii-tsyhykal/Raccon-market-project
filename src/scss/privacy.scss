@@ -1,5 +1,8 @@
 .header-back {
-  padding: 25px 0px 0px 0px;
+  padding: 24px 0px 0px 0px;
+  @include media(desktop) {
+    padding: 80px 0px 0px 0px;
+  }
   .container {
     .back-home-btn {
       color: var(--green);
@@ -30,7 +33,10 @@
 }
 
 .privacy-section {
-  padding-bottom: 16px;
+  padding: 40px 0px 16px 0px;
+  @include media(desktop) {
+    padding: 32px 0px 80px 0px;
+  }
   .privacy-policy-title {
     font-weight: 700;
     font-size: 20px;
