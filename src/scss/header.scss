@@ -1,9 +1,11 @@
 .header {
   padding-top: 1px;
+  position: fixed;
+  width: 100%;
+  background-color: var(--black);
 }
 
 .header-navigation {
-  position: static;
   display: flex;
   align-items: center;
   align-content: center;
