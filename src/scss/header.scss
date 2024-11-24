@@ -1,5 +1,8 @@
 .header {
   padding-top: 1px;
+  position: fixed;
+  width: 100%;
+  background-color: var(--black);
 }
 
 .header-navigation {
