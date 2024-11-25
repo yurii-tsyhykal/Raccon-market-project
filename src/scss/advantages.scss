@@ -1,38 +1,57 @@
 .advantages-titel {
-font-weight: 700;
-font-size: 20px;
-text-align: center;
-color: var(--orange);
-margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: var(--orange);
+  margin-bottom: 16px;
+  @include media(desktop) {
+    font-family: var(--second-family);
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
 }
 .advantages-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-items: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-items: center;
+  align-items: center;
+  @include media(desktop) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
+  }
 }
 .advantages-list-item {
-    padding: 24px 16px;
-    background-image: url("../img/advantages/advantages.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  padding: 24px 16px;
+  max-width: 271px;
+  background-image: url('../img/advantages/advantages.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .advantages-text {
-font-weight: 700;
-font-size: 14px;
-text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  @include media(desktop) {
+    font-size: 16px;
+  }
 }
 .advantages-subtext {
-font-size: 14px;
-text-align: center;
+  font-size: 14px;
+  text-align: center;
+  @include media(desktop) {
+    font-size: 16px;
+  }
 }
 .advantages-text-container {
-    align-content: center;
-    justify-content: center;
-    max-width: 239px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  align-items: center;
+  justify-items: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
