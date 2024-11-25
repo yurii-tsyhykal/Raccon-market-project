@@ -30,3 +30,21 @@ window.matchMedia('(min-width: 1200px)').addEventListener('change', e => {
     closeMenu();
   }
 });
+
+document.querySelectorAll('.header-list-link[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(
+      this.getAttribute('href').split('#')[1]
+    );
+    if (!target) return;
+
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: elementPosition - headerHeight,
+      behavior: 'smooth',
+    });
+  });
+});
