@@ -1,0 +1,17 @@
+.falling-image {
+    position: absolute;
+    animation: fall linear infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0px); /* Начало анимации над экраном */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) ; /* Уход с экрана */
+        opacity: 0;
+    }
+}
+
