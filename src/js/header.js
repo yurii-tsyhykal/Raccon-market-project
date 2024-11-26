@@ -53,7 +53,7 @@ document.querySelectorAll('.header-list-link[href^="#"]').forEach(anchor => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const fallingImagesContainer = document.getElementById('falling-images');
-  const imageFolder = '/img/';
+  const imageFolder = './img/';
   const imageFiles = ['image1.png', 'image2.png'];
 
 
