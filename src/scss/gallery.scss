@@ -1,91 +1,101 @@
-.container.gallery-container {
-  padding: 0px 31px;
-  @include media(desktop) {
-    padding-left: 130px;
-    padding-right: 148px;
-    position: relative;
-  }
-  .gallery-title {
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    color: var(--orange);
-    margin-bottom: 16px;
+#gallery {
+  padding-bottom: 80px;
+  .container.gallery-container {
+    padding: 0px 31px;
     @include media(desktop) {
-      font-family: var(--second-family);
-      font-weight: 400;
-      font-size: 24px;
-      text-transform: uppercase;
-      margin-bottom: 48px;
+      padding-left: 130px;
+      padding-right: 148px;
+      position: relative;
     }
-  }
-
-  .gallery-swiper {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 37px;
-
-    @include media(desktop) {
-      padding-bottom: 37px;
-      padding-left: 40px;
-    }
-
-    .swiper-wrapper.gallery-wrapper {
-      .swiper-slide {
-        display: flex;
-        justify-content: center;
-        @include media(desktop) {
-          display: block;
-        }
-      }
-      transition: transform 300ms ease-out;
-    }
-    .swiper-pagination-gallery {
+    .gallery-title {
+      font-weight: 700;
+      font-size: 20px;
       text-align: center;
-      transform: translateY(24px);
+      color: var(--orange);
+      margin-bottom: 16px;
       @include media(desktop) {
-        display: none;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 48px;
       }
-      .swiper-pagination-bullet {
-        background-color: var(--white);
-        opacity: 1;
-        width: 5px;
-        height: 5px;
-        &-active {
-          background-color: var(--green);
+    }
+
+    .gallery-swiper {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 37px;
+
+      @include media(desktop) {
+        padding-bottom: 37px;
+        padding-left: 40px;
+      }
+
+      .swiper-wrapper.gallery-wrapper {
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          @include media(desktop) {
+            display: block;
+          }
+        }
+        transition: transform 300ms ease-out;
+      }
+      .swiper-pagination-gallery {
+        text-align: center;
+        transform: translateY(24px);
+        @include media(desktop) {
+          display: none;
+        }
+        .swiper-pagination-bullet {
+          background-color: var(--white);
+          opacity: 1;
           width: 5px;
           height: 5px;
+          &-active {
+            background-color: var(--green);
+            width: 5px;
+            height: 5px;
+          }
+        }
+      }
+      .swiper-button-next:after,
+      .swiper-rtl .swiper-button-prev:after {
+        content: none;
+      }
+
+      .swiper-button-prev:after,
+      .swiper-rtl .swiper-button-next:after {
+        content: none;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+    }
+    .gallery-custom-next,
+    .gallery-custom-prev {
+      display: none;
+      @include media(desktop) {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        width: 80px;
+        height: 55px;
+        &:active {
+          transform: scale(1.05);
         }
       }
     }
-    .swiper-button-next:after,
-    .swiper-rtl .swiper-button-prev:after {
-      content: none;
+    .gallery-custom-prev {
+      left: 48px;
+      top: 50%;
+      rotate: 180deg;
     }
-
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after {
-      content: none;
+    .gallery-custom-next {
+      right: 48px;
+      top: 50%;
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none;
-    }
-  }
-  .gallery-custom-next,
-  .gallery-custom-prev {
-    cursor: pointer;
-    position: absolute;
-    width: 80px;
-    height: 55px;
-  }
-  .gallery-custom-prev {
-    left: 48px;
-    top: 50%;
-    rotate: 180deg;
-  }
-  .gallery-custom-next {
-    right: 48px;
-    top: 50%;
   }
 }
