@@ -8,11 +8,13 @@ function closeMenu() {
   backdrop.classList.remove('active');
   openMenuBtn.classList.remove('hidden');
   menuLinks.forEach(item => item.classList.remove('active'));
+  document.body.classList.remove('no-scroll');
 }
 
 openMenuBtn.addEventListener('click', function () {
   const isOpen = mobileMenu.classList.contains('is-open');
   mobileMenu.classList.toggle('is-open', !isOpen);
+  document.body.classList.add('no-scroll');
   backdrop.classList.toggle('active', !isOpen);
 });
 
@@ -46,5 +48,48 @@ document.querySelectorAll('.header-list-link[href^="#"]').forEach(anchor => {
       top: elementPosition - headerHeight,
       behavior: 'smooth',
     });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const fallingImagesContainer = document.getElementById('falling-images');
+  const imageFolder = 'img/';
+  const imageFiles = ['image1.png', 'image2.png'];
+
+
+
+
+  const imageSourcesDesctop = imageFiles.map(file => `${imageFolder}${file}`); 
+  const imageSourcesMob = [`${imageFolder}image1.png`];
+  const imageSources = window.innerWidth <= 1200 ? imageSourcesMob : imageSourcesDesctop;
+  const imageCount =
+    window.innerWidth <= 1200 ? 5 : 30;
+
+
+  function createFallingImage() {
+    const img = document.createElement('img');
+    img.src = imageSources[Math.floor(Math.random() * imageSources.length)];
+    img.classList.add('falling-image');
+
+    const screenWidth = window.innerWidth;
+    const size =
+      screenWidth < 1200 ? 55: Math.random() * 50 + 30;
+    img.style.width = `${size}px`;
+
+    img.style.left = Math.random() * 100 + 'vw';
+    img.style.top = Math.random() * -100 - 50 + 'px'; 
+
+    img.style.animationDuration = Math.random() * 3 + 2 + 's';
+    img.style.animationDelay = Math.random() * 5 + 's';
+
+    fallingImagesContainer.appendChild(img);
+}
+
+  for (let i = 0; i < imageCount; i++) {
+    createFallingImage();
+  }
+
+  document.addEventListener('click', () => {
+    fallingImagesContainer.innerHTML = '';
   });
 });
