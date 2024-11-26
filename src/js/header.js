@@ -1,3 +1,6 @@
+import image1 from '../img/image1.png';
+import image2 from '../img/image2.png';
+
 const mobileMenu = document.querySelector('.header-menu');
 const openMenuBtn = document.querySelector('.open-menu');
 const menuLinks = document.querySelectorAll('.header-list-item');
@@ -53,18 +56,15 @@ document.querySelectorAll('.header-list-link[href^="#"]').forEach(anchor => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const fallingImagesContainer = document.getElementById('falling-images');
-  const imageFolder = './img/';
-  const imageFiles = ['image1.png', 'image2.png'];
+const imageFiles = [image1, image2];
 
+const imageSourcesDesctop = imageFiles;
+const imageSourcesMob = [image1];
 
+let imageSources =
+  window.innerWidth <= 1200 ? imageSourcesMob : imageSourcesDesctop;
 
-
-  const imageSourcesDesctop = imageFiles.map(file => `${imageFolder}${file}`); 
-  const imageSourcesMob = [`${imageFolder}image1.png`];
-  const imageSources = window.innerWidth <= 1200 ? imageSourcesMob : imageSourcesDesctop;
-  const imageCount =
-    window.innerWidth <= 1200 ? 5 : 30;
-
+  const imageCount = window.innerWidth <= 1200 ? 5 : 30;
 
   function createFallingImage() {
     const img = document.createElement('img');
@@ -72,18 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
     img.classList.add('falling-image');
 
     const screenWidth = window.innerWidth;
-    const size =
-      screenWidth < 1200 ? 55: Math.random() * 50 + 30;
+    const size = screenWidth < 1200 ? 55 : Math.random() * 50 + 30;
     img.style.width = `${size}px`;
 
     img.style.left = Math.random() * 100 + 'vw';
-    img.style.top = Math.random() * -100 - 50 + 'px'; 
+    img.style.top = Math.random() * -100 - 50 + 'px';
 
     img.style.animationDuration = Math.random() * 3 + 2 + 's';
     img.style.animationDelay = Math.random() * 5 + 's';
 
     fallingImagesContainer.appendChild(img);
-}
+  }
 
   for (let i = 0; i < imageCount; i++) {
     createFallingImage();
