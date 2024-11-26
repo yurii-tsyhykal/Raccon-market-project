@@ -9,8 +9,8 @@ const swiper = () => {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
+    grabCursor: true,
     spaceBetween: 60,
-    centeredSlides: true,
 
     pagination: {
       clickable: true,
@@ -19,6 +19,10 @@ const swiper = () => {
     navigation: {
       nextEl: '.review-custom-next',
       prevEl: '.review-custom-prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
     },
   });
 };
