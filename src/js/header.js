@@ -3,7 +3,7 @@ import image2 from '../img/image2.png';
 
 const mobileMenu = document.querySelector('.header-menu');
 const openMenuBtn = document.querySelector('.open-menu');
-const menuLinks = document.querySelectorAll('.header-list-item');
+const menuLinks = document.querySelectorAll('.header-list-link');
 const backdrop = document.getElementById('backdrop');
 
 function closeMenu() {
